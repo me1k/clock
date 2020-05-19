@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.scss';
-import ClockWrapper from './ClockWrapper/ClockWrapper';
+import ClockWrapper from './Clock/ClockWrapper/ClockWrapper';
+import TimerWrapper from './Timer/TimerWrapper';
 
 function App() {
   return (
     <div className="App">
-      <ClockWrapper />
+      <ClockWrapper clockText={'Uhr'} />
+      <TimerWrapper timerText={'verbleibend'} />
     </div>
   );
 }

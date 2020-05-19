@@ -1,5 +1,5 @@
 import React from 'react';
-import './ClockHours.scss';
+import './Hours.scss';
 
 interface IProps {
   hours: number;

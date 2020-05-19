@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 import './ClockWrapper.scss';
-import ClockHours from '../ClockHours/ClockHours';
-import ClockMinutes from '../ClockMinutes/ClockMinutes';
-import ClockSeconds from '../ClockSeconds/ClockSeconds';
-import { hours, minutes, seconds } from '../utils/helpers';
+import Hours from '../../components/Hours/Hours';
+import Minutes from '../../components/Minutes/Minutes';
+import Seconds from '../../components/Seconds/Seconds';
+import { hours, minutes, seconds } from '../../utils/helpers';
 
-interface IProps {}
+interface IProps {
+  clockText: string;
+}
 
 const ClockWrapper = (props: IProps) => {
   const [hour, setHours] = useState<number>(0);
@@ -23,12 +25,12 @@ const ClockWrapper = (props: IProps) => {
 
   return (
     <div className="clock-wrapper">
-      <ClockHours hours={hour} />
+      <Hours hours={hour} />
       <div className="clock-divider">:</div>
-      <ClockMinutes minutes={minute} />
+      <Minutes minutes={minute} />
       <div className="clock-divider">:</div>
-      <ClockSeconds seconds={second} />
-      <div className="clock-text">Uhr</div>
+      <Seconds seconds={second} />
+      <div className="clock-text">{props.clockText}</div>
     </div>
   );
 };
