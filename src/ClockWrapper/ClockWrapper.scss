@@ -1,0 +1,19 @@
+.clock-wrapper {
+  width: calc(100% / 5);
+  height: 100px;
+  margin: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .clock-divider,
+  .clock-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .clock-text {
+    padding-left: 10px;
+  }
+}

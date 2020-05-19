@@ -1,0 +1,14 @@
+.clock-minutes-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .clock-minutes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
