@@ -4,7 +4,7 @@ import './ClockWrapper.scss';
 import Hours from '../../components/Hours/Hours';
 import Minutes from '../../components/Minutes/Minutes';
 import Seconds from '../../components/Seconds/Seconds';
-import { hours, minutes, seconds } from '../../utils/helpers';
+import { clockHours, clockMinutes, clockSeconds } from '../../utils/helpers';
 
 interface IProps {
   clockText: string;
@@ -17,9 +17,9 @@ const ClockWrapper = (props: IProps) => {
 
   useEffect(() => {
     setInterval(() => {
-      setHours(hours);
-      setMinutes(minutes);
-      setSeconds(seconds);
+      setHours(clockHours);
+      setMinutes(clockMinutes);
+      setSeconds(clockSeconds);
     }, 1000);
   });
 

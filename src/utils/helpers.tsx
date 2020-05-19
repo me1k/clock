@@ -1,18 +1,18 @@
 import moment from 'moment';
 
-export const hours = () => {
+export const clockHours = () => {
   const date = moment();
   const hour = date.hour();
   return hour;
 };
 
-export const minutes = () => {
+export const clockMinutes = () => {
   const date = moment();
   const minute = date.minute();
   return minute;
 };
 
-export const seconds = () => {
+export const clockSeconds = () => {
   const date = moment();
   const second = date.second();
   return second;
